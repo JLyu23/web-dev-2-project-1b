@@ -34,13 +34,22 @@
   /* colors */
   --background-color: #303446;
   --body-text-color: #c6d0f5;
+  --menu-button-color: #81c8be;
+  --nav-background-color: #232634;
+  --link-text-color: #e5c890;
+}
+
+/*===================== General/Text Styling =====================*/
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--background-color);
 }
 
-p {
+p, li {
   font-family: var(--body-font);
   font-optical-sizing: auto;
 }
@@ -53,3 +62,83 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-transform: uppercase;
 }
+
+/*--------------- Link Styling ---------------*/
+a {
+  color: var(--link-text-color);
+  text-decoration: none;
+}
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--body-text-color);
+}
+
+/*===================== Header Styling =====================*/
+/*--------------- Menu Button ---------------*/
+button {
+  background-color: transparent;
+  /* border: 3px solid var(--menu-button-color); */
+  /* border-radius: .5rem; */
+  border: none;
+  cursor: pointer;
+  fill: var(--menu-button-color);
+  display: block;
+}
+
+.button-1 .line {
+  transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+  transform-origin: center;
+}
+
+.button-1[aria-expanded=true] .line {
+  transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+  transform-origin: center;
+}
+
+.button-1[aria-expanded=true] :is(.ham-top, .ham-bottom) {
+  y: 45;
+}
+
+.button-1[aria-expanded=true] .ham-top {
+  rotate: 45deg;
+}
+
+.button-1[aria-expanded=true] .ham-middle {
+  opacity: 0;
+}
+
+.button-1[aria-expanded=true] .ham-bottom {
+  rotate: -45deg;
+}
+
+/*--------------- Navigation ---------------*/
+nav {
+  background-color: var(--nav-background-color);
+}
+
+nav > ul {
+  display: none;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  padding: .5rem;
+}
+
+/*===================== Main Styling =====================*/
+/* Can be broken up into sections later*/
+
+/*===================== Footer Styling =====================*/
