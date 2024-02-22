@@ -36,7 +36,12 @@
   --body-text-color: #c6d0f5;
   --menu-button-color: #81c8be;
   --nav-background-color: #232634;
-  --link-text-color: #e5c890;
+  --link-text-color-primary: #e5c890;
+  --link-text-color-secondary: #babbf1;
+
+  /* box padding, border, margins */
+  --form-box-margin: 1rem;
+  --form-box-padding: .75rem;
 }
 
 /*===================== General/Text Styling =====================*/
@@ -52,6 +57,7 @@ body {
 p, li {
   font-family: var(--body-font);
   font-optical-sizing: auto;
+  color: var(--body-text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,36 +71,39 @@ h1 {
 
 /*--------------- Link Styling ---------------*/
 a {
-  color: var(--link-text-color);
+  color: var(--link-text-color-primary) !important;
   text-decoration: none;
 }
 
-a:link {
-
-}
-
 a:visited {
-
+  color: var(--link-text-color-secondary);
 }
 
 a:hover, a:active {
+  border: none;
+  font-style: italic;
   text-decoration: underline;
 }
 
+a:focus {
+  border: 2px dotted var(--link-text-color-secondary);
+}
+
 a:active {
-  color: var(--body-text-color);
+  color: var(--link-text-color-secondary);
 }
 
 /*===================== Header Styling =====================*/
 /*--------------- Menu Button ---------------*/
 button {
   background-color: transparent;
-  /* border: 3px solid var(--menu-button-color); */
-  /* border-radius: .5rem; */
   border: none;
   cursor: pointer;
   fill: var(--menu-button-color);
   display: block;
+  position: fixed;
+  top: .375rem;
+  right: .375rem;
 }
 
 .button-1 .line {
@@ -123,9 +132,19 @@ button {
   rotate: -45deg;
 }
 
+@media screen and (min-width: 48em) {
+  button {
+    display: none;
+  }
+}
+
 /*--------------- Navigation ---------------*/
 nav {
+  margin: var(--form-box-margin);
   background-color: var(--nav-background-color);
+  position: fixed;
+  top: 2.8125rem;
+  right: 0;
 }
 
 nav > ul {
@@ -135,8 +154,26 @@ nav > ul {
 }
 
 nav ul li {
-  padding: .5rem;
+  padding: var(--form-box-padding);
 }
+
+@media screen and (min-width: 48em) {
+  nav, nav > ul {
+    display: block;
+  }
+  
+  nav {
+    margin: 0;
+    padding-left: 1.5rem;
+    padding-top: 4rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16rem;
+    height: 100%;
+  }
+}
+
 
 /*===================== Main Styling =====================*/
 /* Can be broken up into sections later*/
