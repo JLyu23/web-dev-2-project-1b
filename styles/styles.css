@@ -87,6 +87,7 @@ a:hover, a:active {
 
 a:focus {
   border: 2px dotted var(--link-text-color-secondary);
+  outline: none;
 }
 
 a:active {
