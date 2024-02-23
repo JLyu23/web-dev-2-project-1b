@@ -59,6 +59,7 @@ p, li {
   font-family: var(--body-font);
   /* font-optical-sizing: auto; */
   color: var(--body-text-color);
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +74,7 @@ h1 {
 
 /*--------------- Link Styling ---------------*/
 a {
-  color: var(--link-text-color-primary) !important;
+  color: var(--link-text-color-primary);
   text-decoration: none;
 }
 
@@ -95,7 +96,6 @@ a:focus {
 a:active {
   color: var(--link-text-color-secondary);
 }
-
 
 
 /*===================== Header Styling =====================*/
@@ -142,11 +142,6 @@ button {
   rotate: -45deg;
 }
 
-@media screen and (min-width: 48em) {
-  button {
-    display: none;
-  }
-}
 
 /*--------------- Navigation ---------------*/
 nav {
@@ -167,39 +162,53 @@ nav ul li {
   padding: var(--form-box-padding);
 }
 
+/*===================== Main Styling =====================*/
+
+/* Can be broken up into sections later*/
+
+/*===================== Footer Styling =====================*/
+footer {
+  grid-column: 2 / 3;
+  width: 100%;
+  text-align: center;
+}
+
+/*///////////////////// Media Queries at 768px /////////////////////*/
 @media screen and (min-width: 48em) {
-  nav, nav > ul {
-    display: block;
-  }
-  
+  /*=============== General/Text MQ ==============*/
   .grid-container {
     display: grid;
-    grid-template-columns: 17.5rem 1fr;
-    gap: 0.5rem;
+    grid-template-columns: 16rem 1fr;
+    gap: 1rem;
+  }
+
+  /*------------------ Link MQ ------------------*/
+  a {
+    font-size: 1.25rem;
+  }
+
+  /*================= Header MQ =================*/
+  /*--------------- Menu Button MQ --------------*/
+  button {
+    display: none;
+  }
+
+  /*--------------- Navigation MQ ---------------*/
+  nav, nav > ul {
+    display: block;
   }
 
   nav {
     margin: 0;
     padding-left: 1.5rem;
     padding-top: 4rem;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 16rem;
     height: 100%;
   }
 
-}
-
-
-/*===================== Main Styling =====================*/
-
-/* Can be broken up into sections later*/
-
-/*===================== Footer Styling =====================*/
-
-footer {
-  grid-column: 1 / -1;
-  width: 100%;
-  text-align: center;
+  /*================== Main MQ ==================*/
+  /*================= Footer MQ =================*/
 }
