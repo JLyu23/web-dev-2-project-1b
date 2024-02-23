@@ -39,6 +39,7 @@
   --link-text-color-primary: #e5c890;
   --link-text-color-secondary: #babbf1;
 
+  
   /* box padding, border, margins */
   --form-box-margin: 1rem;
   --form-box-padding: .75rem;
@@ -56,17 +57,18 @@ body {
 
 p, li {
   font-family: var(--body-font);
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   color: var(--body-text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--header-font);
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
 }
 
 h1 {
   text-transform: uppercase;
+  display: block;
 }
 
 /*--------------- Link Styling ---------------*/
@@ -94,7 +96,14 @@ a:active {
   color: var(--link-text-color-secondary);
 }
 
+
+
 /*===================== Header Styling =====================*/
+header {
+  /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
+  grid-row: span 2;
+}
+
 /*--------------- Menu Button ---------------*/
 button {
   background-color: transparent;
@@ -163,6 +172,12 @@ nav ul li {
     display: block;
   }
   
+  .grid-container {
+    display: grid;
+    grid-template-columns: 17.5rem 1fr;
+    gap: 0.5rem;
+  }
+
   nav {
     margin: 0;
     padding-left: 1.5rem;
@@ -173,10 +188,18 @@ nav ul li {
     width: 16rem;
     height: 100%;
   }
+
 }
 
 
 /*===================== Main Styling =====================*/
+
 /* Can be broken up into sections later*/
 
 /*===================== Footer Styling =====================*/
+
+footer {
+  grid-column: 1 / -1;
+  width: 100%;
+  text-align: center;
+}

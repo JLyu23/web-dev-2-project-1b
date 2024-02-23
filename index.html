@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1B</title>
+    <link rel="stylesheet" href="styles/fwd-normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
-<body id="top">
-    <header>
-        <h1>CSS Custom Properties (CSS Variables)</h1>
+<body id="top" class="grid-container">
+    <header class="grid-item">
         <button id="menu-button" class="button-1" aria-label="Main Menu" aria-controls="primary-navigation" aria-expanded="false">
             <svg class="hamburger" viewBox="0 0 100 100" width="50">
                 <rect   class="line ham-top" 
@@ -41,8 +41,8 @@
             </ul>
         </nav>
     </header>
-
-    <main>
+    <main class="grid-item">
+        <h1>CSS Custom Properties (CSS Variables)</h1>
         <section id="what-1">
             <h2>What is CSS Variables?</h2>
             <p>Css Variables are a way to assign specific values to be re-used throughout the code. If people are familiar with variables in other languages then there isn't too much explaining to do, CSS Variables allow people to define a value once, then reference it multiple times within the code. This allows for better organization whether people are trying to keep their code consistent on a solo project, or keeping things organized within their teams.
@@ -93,7 +93,7 @@
         </section>
     </main>
     
-    <footer>
+    <footer class="grid-item">
         <p><a href="#top">Back to Top</a></p>
         <p>&copy; 2024 - For educational purposes</p>
     </footer>
