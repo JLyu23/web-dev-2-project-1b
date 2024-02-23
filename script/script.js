@@ -16,12 +16,7 @@ function hamburgerState(isOpen) {
 function toggleNav() {
     const openMenu = menuButton.getAttribute('aria-expanded');
 
-    // openMenu === 'false' ? 
-    //     (menuButton.setAttribute('aria-expanded', 'true'), showNav())
-    //     : (menuButton.setAttribute('aria-expanded', 'false'), hideNav());
-
-    openMenu === 'false' ?
-        showNav()
+    openMenu === 'false' ? showNav()
         : hideNav();
 }
 
@@ -33,7 +28,6 @@ menuButton.addEventListener('click', function () {
 window.addEventListener('resize', function() {
     const windowWidth = window.innerWidth;
 
-    windowWidth > 768 ? 
-          (showNav(), hamburgerState(true)) 
+    windowWidth > 768 ? (showNav(), hamburgerState(true)) 
         : (hideNav(), hamburgerState(false));
 });
