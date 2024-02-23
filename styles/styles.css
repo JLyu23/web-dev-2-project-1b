@@ -39,6 +39,7 @@
   --link-text-color-primary: #e5c890;
   --link-text-color-secondary: #babbf1;
 
+  
   /* box padding, border, margins */
   --form-box-margin: 1rem;
   --form-box-padding: .75rem;
@@ -67,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-transform: uppercase;
+  display: block;
 }
 
 /*--------------- Link Styling ---------------*/
@@ -93,7 +95,10 @@ a:active {
   color: var(--link-text-color-secondary);
 }
 
+
+
 /*===================== Header Styling =====================*/
+
 /*--------------- Menu Button ---------------*/
 button {
   background-color: transparent;
@@ -172,10 +177,18 @@ nav ul li {
     width: 16rem;
     height: 100%;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 17.5rem 1fr;
+  }
+
+
 }
 
 
 /*===================== Main Styling =====================*/
+
 /* Can be broken up into sections later*/
 
 /*===================== Footer Styling =====================*/
