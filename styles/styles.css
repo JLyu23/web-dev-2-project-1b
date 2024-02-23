@@ -57,13 +57,13 @@ body {
 
 p, li {
   font-family: var(--body-font);
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   color: var(--body-text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--header-font);
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
 }
 
 h1 {
@@ -98,6 +98,10 @@ a:active {
 
 
 /*===================== Header Styling =====================*/
+header {
+  /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
+  grid-row: span 2;
+}
 
 /*--------------- Menu Button ---------------*/
 button {
@@ -167,6 +171,12 @@ nav ul li {
     display: block;
   }
   
+  .grid-container {
+    display: grid;
+    grid-template-columns: 17.5rem 1fr;
+    gap: 0.5rem;
+  }
+
   nav {
     margin: 0;
     padding-left: 1.5rem;
@@ -178,12 +188,6 @@ nav ul li {
     height: 100%;
   }
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: 17.5rem 1fr;
-  }
-
-
 }
 
 
@@ -192,3 +196,9 @@ nav ul li {
 /* Can be broken up into sections later*/
 
 /*===================== Footer Styling =====================*/
+
+footer {
+  grid-column: 1 / -1;
+  width: 100%;
+  text-align: center;
+}
