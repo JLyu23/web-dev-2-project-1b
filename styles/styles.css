@@ -29,15 +29,61 @@
   --surface0: #414559;
   --base: #303446;
   --mantle: #292c3c;
-  --crust: #232634; */
+  --crust: #232634;*/
+
+  /* DEFAULT*/
+  --default-background-color: #303446;
+  --default-body-text-color: #c6d0f5;
+  --default-body-heading-color: #a6d189;
+  --default-menu-button-color: #81c8be;
+  --default-nav-background-color: #232634;
+  --default-link-text-color-primary: #e5c890;
+  --default-link-text-color-secondary: #f4b8e4; 
+
+  /* NIC THEME */
+  --nic-background-color: #143d63;
+  --nic-body-heading-color: #a8d9ff;
+  --nic-body-text-color: #eedcce;
+  --nic-menu-button-color: #ffda8a;
+  --nic-nav-background-color: #0e273a;
+  --nic-link-text-color-primary: #e8ad7d;
+  --nic-link-text-color-secondary: #b3c3ff;
+
+  /* JEN THEME */
+  --jen-background-color: #2c1a96;
+  --jen-body-heading-color: #9ee8e6;
+  --jen-body-text-color: #b9c0fe;
+  --jen-menu-button-color: #cadfec;
+  --jen-nav-background-color: #221b60;
+  --jen-link-text-color-primary: #cdbcf5;
+  --jen-link-text-color-secondary: #bde9f4;
+
+  /* KYLAN THEME */
+  --kyl-background-color: #544087;
+  --kyl-body-heading-color: #ffde5c;
+  --kyl-body-text-color: #ededed;
+  --kyl-menu-button-color: #ecd8fd;
+  --kyl-nav-background-color: #3d2970;
+  --kyl-link-text-color-primary: #f5efdb;
+  --kyl-link-text-color-secondary: #f0bcbc;
+
+  /* NAT THEME */
+  --nat-background-color: #2a4419;
+  --nat-body-heading-color: #c3df5d;
+  --nat-body-text-color: #fffaf0;
+  --nat-menu-button-color: #e6cfa8;
+  --nat-nav-background-color: #233318;
+  --nat-link-text-color-primary: #a7c3b6;
+  --nat-link-text-color-secondary: #babcb8; 
 
   /* colors */
-  --background-color: #303446;
-  --body-text-color: #c6d0f5;
-  --menu-button-color: #81c8be;
-  --nav-background-color: #232634;
-  --link-text-color-primary: #e5c890;
-  --link-text-color-secondary: #babbf1;
+  --background-color: var(--default-background-color);
+  --body-heading-color: var(--default-body-heading-color);
+  --body-text-color: var(--default-body-text-color);
+  --menu-button-color: var(--default-menu-button-color);
+  --nav-background-color: var(--default-nav-background-color);
+  --link-text-color-primary: var(--default-link-text-color-primary);
+  --link-text-color-secondary: var(--default-link-text-color-secondary);
 
   
   /* box padding, border, margins */
@@ -64,6 +110,7 @@ p, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--body-heading-color);
   font-family: var(--header-font);
   /* font-optical-sizing: auto; */
 }
@@ -79,7 +126,7 @@ a {
   text-decoration: none;
 }
 
-a:visited {
+a:visited:not(footer a) {
   color: var(--link-text-color-secondary);
 }
 
