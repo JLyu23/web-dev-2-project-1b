@@ -150,6 +150,11 @@ a:active {
 header {
   /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
   grid-row: span 2;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  background-color: var(--default-nav-background-color);
 }
 
 /*--------------- Menu Button ---------------*/
@@ -211,7 +216,10 @@ nav ul li {
 }
 
 /*===================== Main Styling =====================*/
-
+main {
+  padding-top: 4rem;
+  grid-column: 2 / 3;
+}
 /* Can be broken up into sections later*/
 
 /*===================== Footer Styling =====================*/
@@ -236,16 +244,18 @@ footer {
   }
 
   /*================= Header MQ =================*/
+  header {
+    /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
+    grid-row: span 2;
+    background-color: transparent;
+  }
+
   /*--------------- Menu Button MQ --------------*/
   button {
     display: none;
   }
 
   /*--------------- Navigation MQ ---------------*/
-  nav, nav > ul {
-    display: block;
-  }
-
   nav {
     margin: 0;
     padding-left: 1.5rem;
@@ -257,6 +267,14 @@ footer {
     height: 100%;
   }
 
+  nav, nav > ul {
+    display: block;
+  }
+
+
   /*================== Main MQ ==================*/
+  /* main {
+    grid-column: 2 / 3;
+  } */
   /*================= Footer MQ =================*/
 }
