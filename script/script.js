@@ -32,7 +32,7 @@ window.addEventListener('resize', function() {
     windowWidth > 768 ? (showNav(), hamburgerState(true)) 
         : (hideNav(), hamburgerState(false));
 });
-
+// random
 scrollToTopButton.addEventListener('click', function (event) {
    event.preventDefault();
     window.scrollTo({
