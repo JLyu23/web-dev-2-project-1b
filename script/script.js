@@ -1,5 +1,6 @@
 const menuButton = document.getElementById('menu-button');
 const menuNav = document.getElementById('menu-nav');
+const scrollToTopButton = document.getElementById('top');
 
 function showNav() {
     menuNav.style.display = 'block';
@@ -30,4 +31,12 @@ window.addEventListener('resize', function() {
 
     windowWidth > 768 ? (showNav(), hamburgerState(true)) 
         : (hideNav(), hamburgerState(false));
+});
+// random
+scrollToTopButton.addEventListener('click', function (event) {
+   event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
 });
