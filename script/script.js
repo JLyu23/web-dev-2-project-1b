@@ -39,11 +39,6 @@ window.addEventListener('resize', function() {
     windowWidth > 768 ? (showNav(), hamburgerState(true)) 
         : (hideNav(), hamburgerState(false));
 });
-<<<<<<< HEAD
-// random
-=======
-
->>>>>>> 10854da470fb29ba7ad6694e9a3d8bb8fc4db425
 
 
 backToTopLink.addEventListener('click', function (event) {
