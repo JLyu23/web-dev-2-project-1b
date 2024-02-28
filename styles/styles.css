@@ -41,20 +41,6 @@
   --default-link-text-color-secondary: #f4b8e4; 
 
   /* NIC THEME */
-<<<<<<< HEAD
-  --nic-background-color: #143d63;
-  --nic-body-heading-color: #a8d9ff;
-  --nic-body-text-color: #eedcce;
-  --nic-menu-button-color: #ffda8a;
-  --nic-nav-background-color: #0e273a;
-  --nic-link-text-color-primary: #e8ad7d;
-  --nic-link-text-color-secondary: #b3c3ff;
-
-  /* JEN THEME */
-  --jen-background-color: #2c1a96;
-  --jen-body-heading-color: #9ee8e6;
-  --jen-body-text-color: #b9c0fe;
-=======
   --nic-background-color: #ede3da;
   --nic-body-heading-color: #4c463e;
   --nic-body-text-color: #1d3fa5;
@@ -67,7 +53,6 @@
   --jen-background-color: #382f8e;
   --jen-body-heading-color: #c3d4fe;
   --jen-body-text-color: #e7dc98;
->>>>>>> 10854da470fb29ba7ad6694e9a3d8bb8fc4db425
   --jen-menu-button-color: #cadfec;
   --jen-nav-background-color: #221b60;
   --jen-link-text-color-primary: #cdbcf5;
@@ -76,22 +61,6 @@
   /* KYLAN THEME */
   --kyl-background-color: #544087;
   --kyl-body-heading-color: #ffde5c;
-<<<<<<< HEAD
-  --kyl-body-text-color: #ededed;
-  --kyl-menu-button-color: #ecd8fd;
-  --kyl-nav-background-color: #3d2970;
-  --kyl-link-text-color-primary: #f5efdb;
-  --kyl-link-text-color-secondary: #f0bcbc;
-
-  /* NAT THEME */
-  --nat-background-color: #2a4419;
-  --nat-body-heading-color: #c3df5d;
-  --nat-body-text-color: #fffaf0;
-  --nat-menu-button-color: #e6cfa8;
-  --nat-nav-background-color: #233318;
-  --nat-link-text-color-primary: #a7c3b6;
-  --nat-link-text-color-secondary: #babcb8; 
-=======
   --kyl-body-text-color: #fffbe0;
   --kyl-menu-button-color: #ecd8fd;
   --kyl-nav-background-color: #3d2970;
@@ -106,7 +75,6 @@
   --nat-nav-background-color: #afc2ad;
   --nat-link-text-color-primary: #2f2f1d;
   --nat-link-text-color-secondary: #534b23; 
->>>>>>> 10854da470fb29ba7ad6694e9a3d8bb8fc4db425
 
   /* colors */
   --background-color: var(--default-background-color);
