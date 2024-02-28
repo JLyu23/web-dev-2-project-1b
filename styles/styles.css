@@ -41,6 +41,7 @@
   --default-link-text-color-secondary: #f4b8e4; 
 
   /* NIC THEME */
+<<<<<<< HEAD
   --nic-background-color: #143d63;
   --nic-body-heading-color: #a8d9ff;
   --nic-body-text-color: #eedcce;
@@ -53,6 +54,20 @@
   --jen-background-color: #2c1a96;
   --jen-body-heading-color: #9ee8e6;
   --jen-body-text-color: #b9c0fe;
+=======
+  --nic-background-color: #ede3da;
+  --nic-body-heading-color: #4c463e;
+  --nic-body-text-color: #1d3fa5;
+  --nic-menu-button-color: #193b67;
+  --nic-nav-background-color: #c0deff;
+  --nic-link-text-color-primary: #1d3368;
+  --nic-link-text-color-secondary: #4e4232;
+
+  /* JEN THEME */
+  --jen-background-color: #382f8e;
+  --jen-body-heading-color: #c3d4fe;
+  --jen-body-text-color: #e7dc98;
+>>>>>>> 10854da470fb29ba7ad6694e9a3d8bb8fc4db425
   --jen-menu-button-color: #cadfec;
   --jen-nav-background-color: #221b60;
   --jen-link-text-color-primary: #cdbcf5;
@@ -61,6 +76,7 @@
   /* KYLAN THEME */
   --kyl-background-color: #544087;
   --kyl-body-heading-color: #ffde5c;
+<<<<<<< HEAD
   --kyl-body-text-color: #ededed;
   --kyl-menu-button-color: #ecd8fd;
   --kyl-nav-background-color: #3d2970;
@@ -75,6 +91,22 @@
   --nat-nav-background-color: #233318;
   --nat-link-text-color-primary: #a7c3b6;
   --nat-link-text-color-secondary: #babcb8; 
+=======
+  --kyl-body-text-color: #fffbe0;
+  --kyl-menu-button-color: #ecd8fd;
+  --kyl-nav-background-color: #3d2970;
+  --kyl-link-text-color-primary: #a3ffc8;
+  --kyl-link-text-color-secondary: #fce3f1;
+
+  /* NAT THEME */
+  --nat-background-color: #c8d7c6;
+  --nat-body-heading-color: #2a4419;
+  --nat-body-text-color: #44392c;
+  --nat-menu-button-color: #5f4335;
+  --nat-nav-background-color: #afc2ad;
+  --nat-link-text-color-primary: #2f2f1d;
+  --nat-link-text-color-secondary: #534b23; 
+>>>>>>> 10854da470fb29ba7ad6694e9a3d8bb8fc4db425
 
   /* colors */
   --background-color: var(--default-background-color);
@@ -148,12 +180,16 @@ a:active {
 
 /*===================== Header Styling =====================*/
 header {
-  /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
   grid-row: span 2;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  background-color: var(--nav-background-color);
 }
 
 /*--------------- Menu Button ---------------*/
-button {
+.button-1 {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -211,8 +247,32 @@ nav ul li {
 }
 
 /*===================== Main Styling =====================*/
-
+main {
+  padding-top: 4rem;
+  grid-column: 2 / 3;
+}
 /* Can be broken up into sections later*/
+
+#theme-button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+}
+
+ul button {
+  color: var(--default-body-text-color);
+  padding: 0.5rem 1rem;
+  background-color: var(--default-nav-background-color);
+  border: 2px solid var(--default-body-text-color);
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px var(--default-menu-button-color));
+
+}
+
+ul button:hover {
+  margin: -1px 0;
+  filter: drop-shadow(2px 2px var(--default-link-text-color-primary));
+}
 
 /*===================== Footer Styling =====================*/
 footer {
@@ -236,16 +296,18 @@ footer {
   }
 
   /*================= Header MQ =================*/
+  header {
+    /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
+    grid-row: span 2;
+    background-color: transparent;
+  }
+
   /*--------------- Menu Button MQ --------------*/
-  button {
+  .button-1 {
     display: none;
   }
 
   /*--------------- Navigation MQ ---------------*/
-  nav, nav > ul {
-    display: block;
-  }
-
   nav {
     margin: 0;
     padding-left: 1.5rem;
@@ -257,6 +319,12 @@ footer {
     height: 100%;
   }
 
+  nav, nav > ul {
+    display: block;
+  }
+
+
   /*================== Main MQ ==================*/
+ 
   /*================= Footer MQ =================*/
 }

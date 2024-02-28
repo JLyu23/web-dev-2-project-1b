@@ -31,39 +31,38 @@
         </button>
         <nav id="nav-header" class="nav-header">
             <ul id="menu-nav" class="menu-nav">
-                <li><a href="#what-1">About CSS Variables</a></li>
-                <li><a href="#what-2">Role of CSS Variables</a></li>
+                <li><a href="#about">About CSS Variables</a></li>
+                <li><a href="#function">Role of CSS Variables</a></li>
                 <li><a href="#why">CSS Variables: its Purpose</a></li>
                 <li><a href="#where">How to utilize CSS Variables</a></li>
                 <li><a href="#pro-con">The Pros and Cons</a></li>
-                <li><a href="#code-demo">Code Demo >:[</a></li>
+                <li><a href="#demo">Code Demo >:[</a></li>
                 <li><a href="#resources">Resources & Acknowledgements</a></li>
             </ul>
         </nav>
     </header>
     <main class="grid-item">
         <h1>CSS Custom Properties (CSS Variables)</h1>
-        <section id="what-1">
+        <section id="about">
             <h2>What is CSS Variables?</h2>
-            <p>Css Variables are a way to assign specific values to be re-used throughout the code. If people are familiar with variables in other languages then there isn't too much explaining to do, CSS Variables allow people to define a value once, then reference it multiple times within the code. This allows for better organization whether people are trying to keep their code consistent on a solo project, or keeping things organized within their teams.
+            <p>CSS custom variables are used to define the names and attribute values of properties according to our own needs. They also provide a way to assign specific values for reuse throughout the code. If people are familiar with variables in other languages, then there isn't too much explaining to do; CSS Variables allow people to define a value once and reference it multiple times within the code. This enables better organization, whether individuals are striving to maintain consistency in a solo project or keep things organized within their teams.
             </p>
         </section>
         
-        <section id="what-2">
+        <section id="function">
             <h2>What does the CSS Variables do?</h2>
-            <p>CSS custom variables allow many benefits.
-                <li>Reusability / Modularity - Allowing you to define specific color palettes, or margin values which you can then reuse throughout your code, improving maintainability & reducing room for error.</li>
+            <p>When building a large website, there are numerous CSS styles in these web pages that will be used repeatedly on many occasions. For example, to maintain a color scheme, certain colors appear throughout the CSS style sheet frequently. If people want to modify the color scheme, whether it's a single color or the entire set of colors, it is not a simple task and is prone to errors. Moreover, CSS variables can reduce the complexity of work and make it easier to modify and add styles without any additional codes.
             </p>
         </section>
         
         <section id="why">
             <h2>Why would you use CSS Variables?</h2>
-            <p>CSS code is very likely to repeat itself, this is a way to minimize repetition. It keeps the file organized, adds readability & semantics to your file. Also, it maintains consistency for solo, or group projects. Color schemes can be changed with ease if using CSS code. The most importantly, modularity. It will allow you to reuse blocks of code, and edit the code's value by changing the variables property itself.</p>
+            <p>A big role of variables is to reduce maintenance costs and to improve development efficiency. CSS code is very likely to repeat itself, and using custom variables is a way to minimize this repetition. It helps keep the file organized, adds readability and semantics to the code. Additionally, it maintains consistency for solo or group projects. Color schemes can be changed with ease when using CSS code. Most importantly, it promotes modularity. This allows developers to reuse blocks of code and edit the code's value by changing the variable's property itself.</p>
         </section>
 
         <section id="where">
             <h2>Where would you use CSS Variables?</h2>
-            <p>When working on large projects, CSS custom properties come in handy since they help preserve consistency and modularity. Any CSS file that needs to define repeated values can use them.
+            <p>When working on large projects, CSS custom properties come in handy, helping preserve consistency and modularity. Any CSS file requiring the definition of repeated values can use them. The flexibility to apply CSS custom properties to any CSS file allows for defining repeating values, including margin settings and color palettes. Their versatility enhances code organization and readability across a range of scenarios, from compact modules to large stylesheets.
             </p>
         </section>
 
@@ -77,19 +76,34 @@
             <li>Readability: Improves the semantics and organization of the code.
             </li>
             <li>Consistency: Guarantees a project-wide consistent appearance and feel.</li>
-            <li>Theming: Makes switching up color schemes easier.</li>
+            <li>Themes: Dynamic themes can be easily implemented by using CSS variables.</li>
+            <li>Fallback argument: When a specific variable is not supported, backup values can make the styles remain consistent. It usually happens in older browsers.</li>
+            <li>Responsive: A singel variable allows the corresponding item to change as the screen size changes.</li>
+
             <p>Cons:</p>
-            <li>Browser Support: Fallbacks may be necessary due to limited support in older browsers</li>
-            <li>Learning Curve: At first, some developers might find it difficult.</li>
+            <li>Learning Curve: At first, some developers might find it difficult since there's a possibility of building a variable system by delvelopers themselves.</li>
             <li>Limited Dynamic Behavior: Unlike SASS variables, which are dynamic, variables are static.</li>
         </section>
 
-        <section id="code-demo">
+        <section id="demo">
             <h2>Code Demo (pay attention in presentation! >:[ )</h2>
+            <ul id="theme-button-container">
+                <button>Catpuccin</button>
+                <button>Nic</button>
+                <button>Jenny</button>
+                <button>Kylan</button>
+                <button>Nat</button>
+            </ul>
         </section>
 
         <section id="resources">
             <h2>Resources & Acknowledgements</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/css/css3_variables.asp">W3Schools</a></li>
+                <li><a href="https://www.fabriziovanmarciano.com/quick-beginners-guide-to-css-variables/">Fabrizio Van Marciano</a></li>
+            </ul>
+            
         </section>
     </main>
     
