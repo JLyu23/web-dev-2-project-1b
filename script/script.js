@@ -3,6 +3,9 @@ import { theme } from ""
 const menuButton = document.getElementById('menu-button');
 const menuNav = document.getElementById('menu-nav');
 const scrollToTopButton = document.getElementById('top');
+const backToTopLink = document.querySelector('a[href="#top"]');
+const skipToContentLinks = document.querySelectorAll('.menu-nav a');
+
 
 function showNav() {
     menuNav.style.display = 'block';
@@ -17,15 +20,19 @@ function hamburgerState(isOpen) {
 };
 
 function toggleNav() {
-    const openMenu = menuButton.getAttribute('aria-expanded');
+    const isOpen = menuNav.style.display === 'block';
+    
+    if (!isOpen) {
+        showNav();
+    } else {
+        hideNav();
+    }
 
-    openMenu === 'false' ? showNav()
-        : hideNav();
+    hamburgerState(!isOpen);
 }
 
 menuButton.addEventListener('click', function () {
     toggleNav();
-    hamburgerState(menuNav.style.display === 'block');
 });
 
 window.addEventListener('resize', function() {
@@ -35,14 +42,31 @@ window.addEventListener('resize', function() {
         : (hideNav(), hamburgerState(false));
 });
 
-scrollToTopButton.addEventListener('click', function (event) {
-   event.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
-});
+// backToTopLink.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth',
+//     });
+// });
 
+// skipToContentLinks.forEach(link => {
+//     link.addEventListener('click', function (event) {
+//         event.preventDefault();
+
+//         const targetSectionId = this.getAttribute('href').substring(1); // Remove the '#' from the href
+//         const targetSection = document.getElementById(targetSectionId);
+
+//         if (targetSection) {
+//             targetSection.scrollIntoView({
+//                 behavior: 'smooth'
+//             });
+
+           
+//             hamburgerState(false);
+//         }
+//     });
+// });
 
 // Theme Switch Buttons
 
