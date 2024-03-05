@@ -102,7 +102,7 @@ body {
   scroll-behavior: smooth;
 }
 
-p, li {
+p, li, ul button {
   font-family: var(--body-font);
   /* font-optical-sizing: auto; */
   color: var(--body-text-color);
@@ -219,27 +219,34 @@ main {
   padding-top: 4rem;
   grid-column: 2 / 3;
 }
-/* Can be broken up into sections later*/
+
+/*--------------- Theme Buttons ---------------*/
+/* #demo {
+  display: flex;
+  flex-flow: row wrap;
+} */
 
 #theme-button-container {
-  display: flex;
-  justify-content: space-around;
   margin: 0.5rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 ul button {
-  color: var(--default-body-text-color);
+  margin: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: var(--default-nav-background-color);
-  border: 2px solid var(--default-body-text-color);
+  border: 2px solid var(--body-text-color);
   border-radius: 8px;
-  filter: drop-shadow(2px 2px var(--default-menu-button-color));
-
+  background-color: var(--nav-background-color);
+  color: var(--body-text-color);
+  filter: drop-shadow(2px 2px var(--menu-button-color));
+  min-width: 7.8125rem;
 }
 
 ul button:hover {
-  margin: -1px 0;
-  filter: drop-shadow(2px 2px var(--default-link-text-color-primary));
+  /* margin: -1px 0; */
+  filter: drop-shadow(2px 2px var(--link-text-color-primary));
 }
 
 /*===================== Footer Styling =====================*/
@@ -265,7 +272,6 @@ footer {
 
   /*================= Header MQ =================*/
   header {
-    /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
     grid-row: span 2;
     background-color: transparent;
   }
@@ -293,6 +299,9 @@ footer {
 
 
   /*================== Main MQ ==================*/
- 
+  main {
+    padding-top: 1rem;
+  }
+
   /*================= Footer MQ =================*/
 }
