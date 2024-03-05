@@ -73,6 +73,11 @@ body {
   scroll-behavior: smooth;
 }
 
+main {
+  max-width: 54rem;
+  margin: 1rem auto;
+}
+
 p, li, ul button {
   font-family: var(--body-font);
   color: var(--body-text-color);
@@ -80,14 +85,52 @@ p, li, ul button {
   font-size: .875rem;
 }
 
+p {
+  text-indent: 2.5rem;
+}
+
+section p {
+  padding: 0 2rem;
+}
+
+section ul {
+  padding: 0 2rem;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+p {
+  text-indent: 2.5rem;
+}
+
+section p {
+  padding: 0 2rem;
+}
+
+section ul {
+  padding: 0 2rem;
+}
+
+section {
+  margin: 3rem 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--body-heading-color);
   font-family: var(--header-font);
+  margin: 1rem;
 }
 
 h1 {
   text-transform: uppercase;
   display: block;
+  margin-bottom: 1rem;
+}
+
+h3 { 
+  padding: 0 1rem;
 }
 
 /*--------------- Link Styling ---------------*/
@@ -201,6 +244,22 @@ main {
   justify-content: space-around;
 }
 
+section:nth-of-type(5) h2 {
+  margin-bottom: 1rem; 
+}
+
+section:nth-of-type(5) ul {
+  margin: 0 2rem;
+}
+
+section:nth-of-type(7) h2 {
+  margin-bottom: 1rem; 
+}
+
+section:nth-of-type(7) ul {
+  margin: 0 2rem; 
+}
+
 ul button {
   margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
@@ -222,6 +281,7 @@ footer {
   width: 100%;
   text-align: center;
   background-color: var(--nav-background-color);
+  margin-bottom: .5rem;
 }
 
 /*///////////////////// Media Queries at 768px /////////////////////*/
@@ -250,6 +310,7 @@ footer {
   header {
     grid-row: span 2;
     background-color: transparent;
+    
   }
 
   /*--------------- Menu Button MQ --------------*/
@@ -274,9 +335,28 @@ footer {
   }
 
   /*================== Main MQ ==================*/
+  main {
+    padding-top: 1rem; 
+    grid-column: 2 / 3;
+    margin: 1rem auto;
+  }
 
+  p {
+    margin-bottom: 1.5rem; 
+    line-height: 1.7;
+  }
+
+  #demo {
+    margin: 2rem 0;
+  }
+
+  #resources {
+    margin: 2rem 0;
+  }
+  
   /*================= Footer MQ =================*/
   footer {
-    background-color: var(--nav-background-color)
+    margin-top: 0rem;
+    background-color: var(--nav-background-color);
   }
 }
