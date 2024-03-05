@@ -40,7 +40,6 @@ window.addEventListener('resize', function() {
         : (hideNav(), hamburgerState(false));
 });
 
-
 backToTopLink.addEventListener('click', function (event) {
     event.preventDefault();
     window.scrollTo({
@@ -66,9 +65,6 @@ skipToContentLinks.forEach(link => {
         }
     });
 });
-
-
-
 
 // Theme Switch Buttons
 
