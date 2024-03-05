@@ -3,34 +3,6 @@
   --body-font: "JetBrains Mono", monospace;
   --header-font: "Oswald", sans-serif;
 
-  /* color palette THIS WILL BE EDITED DOWN SIGNIFICANTLY ONCE WE KNOW WHAT COLORS WE ARE USING*/
-  /* --rosewater: #f2d5cf;
-  --flamingo: #eebebe;
-  --pink: #f4b8e4;
-  --mauve: #ca9ee6;
-  --red: #e78284;
-  --maroon: #ea999c;
-  --peach: #ef9f76;
-  --yellow: #e5c890;
-  --green: #a6d189;
-  --teal: #81c8be;
-  --sky: #99d1db;
-  --sapphire: #85c1dc;
-  --blue: #8caaee;
-  --lavender: #babbf1;
-  --text: #c6d0f5;
-  --subtext1: #b5bfe2;
-  --subtext0: #a5adce;
-  --overlay2: #949cbb;
-  --overlay1: #838ba7;
-  --overlay0: #737994;
-  --surface2: #626880;
-  --surface1: #51576d;
-  --surface0: #414559;
-  --base: #303446;
-  --mantle: #292c3c;
-  --crust: #232634;*/
-
   /* DEFAULT*/
   --default-background-color: #303446;
   --default-body-text-color: #c6d0f5;
@@ -84,7 +56,6 @@
   --nav-background-color: var(--default-nav-background-color);
   --link-text-color-primary: var(--default-link-text-color-primary);
   --link-text-color-secondary: var(--default-link-text-color-secondary);
-
   
   /* box padding, border, margins */
   --form-box-margin: 1rem;
@@ -104,15 +75,14 @@ body {
 
 p, li, ul button {
   font-family: var(--body-font);
-  /* font-optical-sizing: auto; */
   color: var(--body-text-color);
   line-height: 1.5;
+  font-size: .875rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--body-heading-color);
   font-family: var(--header-font);
-  /* font-optical-sizing: auto; */
 }
 
 h1 {
@@ -265,6 +235,18 @@ footer {
     gap: 1rem;
   }
 
+  p, li, ul button {
+    font-size: 1rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    
+  }
+  
+  h1 {
+    font-size: 
+  }
+
   /*------------------ Link MQ ------------------*/
   a {
     font-size: 1.25rem;
@@ -299,9 +281,6 @@ footer {
 
 
   /*================== Main MQ ==================*/
-  main {
-    padding-top: 1rem;
-  }
 
   /*================= Footer MQ =================*/
   footer {
