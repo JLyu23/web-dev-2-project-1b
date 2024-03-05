@@ -304,4 +304,7 @@ footer {
   }
 
   /*================= Footer MQ =================*/
+  footer {
+    background-color: var(--nav-background-color)
+  }
 }
