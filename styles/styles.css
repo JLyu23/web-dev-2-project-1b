@@ -139,21 +139,22 @@ header {
 }
 
 .button-1 .line {
-  transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+  transition: transform 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
   transform-origin: center;
 }
 
 .button-1[aria-expanded=true] .line {
-  transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+  transition: transform 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
   transform-origin: center;
 }
 
 .button-1[aria-expanded=true] :is(.ham-top, .ham-bottom) {
-  y: 45;
+  transform: translateY(45px);
 }
 
 .button-1[aria-expanded=true] .ham-top {
   rotate: 45deg;
+  transform: translate(3px, 29px);
 }
 
 .button-1[aria-expanded=true] .ham-middle {
@@ -162,6 +163,7 @@ header {
 
 .button-1[aria-expanded=true] .ham-bottom {
   rotate: -45deg;
+  transform: translate(-3px, -31px);
 }
 
 
@@ -191,20 +193,16 @@ main {
 }
 
 /*--------------- Theme Buttons ---------------*/
-/* #demo {
-  display: flex;
-  flex-flow: row wrap;
-} */
-
 #theme-button-container {
   margin: 0.5rem 0;
+  padding: 1rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
 
 ul button {
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
   border: 2px solid var(--body-text-color);
   border-radius: 8px;
@@ -215,8 +213,7 @@ ul button {
 }
 
 ul button:hover {
-  /* margin: -1px 0; */
-  filter: drop-shadow(2px 2px var(--link-text-color-primary));
+  filter: drop-shadow(4px 4px var(--link-text-color-primary));
 }
 
 /*===================== Footer Styling =====================*/
@@ -224,6 +221,7 @@ footer {
   grid-column: 2 / 3;
   width: 100%;
   text-align: center;
+  background-color: var(--nav-background-color);
 }
 
 /*///////////////////// Media Queries at 768px /////////////////////*/
@@ -239,12 +237,8 @@ footer {
     font-size: 1rem;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    
-  }
-  
   h1 {
-    font-size: 
+    font-size: 2.5rem;
   }
 
   /*------------------ Link MQ ------------------*/
@@ -278,7 +272,6 @@ footer {
   nav, nav > ul {
     display: block;
   }
-
 
   /*================== Main MQ ==================*/
 
