@@ -3,34 +3,6 @@
   --body-font: "JetBrains Mono", monospace;
   --header-font: "Oswald", sans-serif;
 
-  /* color palette THIS WILL BE EDITED DOWN SIGNIFICANTLY ONCE WE KNOW WHAT COLORS WE ARE USING*/
-  /* --rosewater: #f2d5cf;
-  --flamingo: #eebebe;
-  --pink: #f4b8e4;
-  --mauve: #ca9ee6;
-  --red: #e78284;
-  --maroon: #ea999c;
-  --peach: #ef9f76;
-  --yellow: #e5c890;
-  --green: #a6d189;
-  --teal: #81c8be;
-  --sky: #99d1db;
-  --sapphire: #85c1dc;
-  --blue: #8caaee;
-  --lavender: #babbf1;
-  --text: #c6d0f5;
-  --subtext1: #b5bfe2;
-  --subtext0: #a5adce;
-  --overlay2: #949cbb;
-  --overlay1: #838ba7;
-  --overlay0: #737994;
-  --surface2: #626880;
-  --surface1: #51576d;
-  --surface0: #414559;
-  --base: #303446;
-  --mantle: #292c3c;
-  --crust: #232634;*/
-
   /* DEFAULT*/
   --default-background-color: #303446;
   --default-body-text-color: #c6d0f5;
@@ -84,7 +56,6 @@
   --nav-background-color: var(--default-nav-background-color);
   --link-text-color-primary: var(--default-link-text-color-primary);
   --link-text-color-secondary: var(--default-link-text-color-secondary);
-
   
   /* box padding, border, margins */
   --form-box-margin: 1rem;
@@ -107,10 +78,27 @@ main {
   margin: 1rem auto;
 }
 
-p, li {
+p, li, ul button {
   font-family: var(--body-font);
   color: var(--body-text-color);
   line-height: 1.5;
+  font-size: .875rem;
+}
+
+p {
+  text-indent: 2.5rem;
+}
+
+section p {
+  padding: 0 2rem;
+}
+
+section ul {
+  padding: 0 2rem;
+}
+
+section {
+  margin: 3rem 0;
 }
 
 p {
@@ -194,21 +182,22 @@ header {
 }
 
 .button-1 .line {
-  transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+  transition: transform 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
   transform-origin: center;
 }
 
 .button-1[aria-expanded=true] .line {
-  transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+  transition: transform 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
   transform-origin: center;
 }
 
 .button-1[aria-expanded=true] :is(.ham-top, .ham-bottom) {
-  y: 45;
+  transform: translateY(45px);
 }
 
 .button-1[aria-expanded=true] .ham-top {
   rotate: 45deg;
+  transform: translate(3px, 29px);
 }
 
 .button-1[aria-expanded=true] .ham-middle {
@@ -217,6 +206,7 @@ header {
 
 .button-1[aria-expanded=true] .ham-bottom {
   rotate: -45deg;
+  transform: translate(-3px, -31px);
 }
 
 
@@ -245,48 +235,44 @@ main {
   grid-column: 2 / 3;
 }
 
-span p {
-margin-bottom: .5rem;
-}
-
+/*--------------- Theme Buttons ---------------*/
 #theme-button-container {
-  display: flex;
-  justify-content: space-around;
   margin: 0.5rem 0;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 section:nth-of-type(5) h2 {
   margin-bottom: 1rem; 
 }
 
-
 section:nth-of-type(5) ul {
   margin: 0 2rem;
 }
 
-
 section:nth-of-type(7) h2 {
   margin-bottom: 1rem; 
 }
-
 
 section:nth-of-type(7) ul {
   margin: 0 2rem; 
 }
 
 ul button {
-  color: var(--default-body-text-color);
+  margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: var(--default-nav-background-color);
-  border: 2px solid var(--default-body-text-color);
+  border: 2px solid var(--body-text-color);
   border-radius: 8px;
-  filter: drop-shadow(2px 2px var(--default-menu-button-color));
-
+  background-color: var(--nav-background-color);
+  color: var(--body-text-color);
+  filter: drop-shadow(2px 2px var(--menu-button-color));
+  min-width: 7.8125rem;
 }
 
 ul button:hover {
-  margin: -1px 0;
-  filter: drop-shadow(2px 2px var(--default-link-text-color-primary));
+  filter: drop-shadow(4px 4px var(--link-text-color-primary));
 }
 
 /*===================== Footer Styling =====================*/
@@ -294,6 +280,7 @@ footer {
   grid-column: 2 / 3;
   width: 100%;
   text-align: center;
+  background-color: var(--nav-background-color);
   margin-bottom: .5rem;
 }
 
@@ -304,6 +291,14 @@ footer {
     display: grid;
     grid-template-columns: 16rem 1fr;
     gap: 1rem;
+  }
+
+  p, li, ul button {
+    font-size: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
   }
 
   /*------------------ Link MQ ------------------*/
@@ -339,13 +334,11 @@ footer {
     display: block;
   }
 
-
   /*================== Main MQ ==================*/
   main {
     padding-top: 1rem; 
     grid-column: 2 / 3;
     margin: 1rem auto;
-    
   }
 
   p {
@@ -353,18 +346,17 @@ footer {
     line-height: 1.7;
   }
 
+  #demo {
+    margin: 2rem 0;
+  }
 
-
-#demo {
-  margin: 2rem 0;
-}
-
-#resources {
-  margin: 2rem 0;
-}
+  #resources {
+    margin: 2rem 0;
+  }
   
   /*================= Footer MQ =================*/
   footer {
     margin-top: 0rem;
-}
+    background-color: var(--nav-background-color);
+  }
 }
