@@ -1,4 +1,4 @@
-import { theme } from ""
+import { theme } from "./themes.js"
 
 const menuButton = document.getElementById('menu-button');
 const menuNav = document.getElementById('menu-nav');
