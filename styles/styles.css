@@ -102,22 +102,47 @@ body {
   scroll-behavior: smooth;
 }
 
+main {
+  max-width: 54rem;
+  margin: 1rem auto;
+}
+
 p, li {
   font-family: var(--body-font);
-  /* font-optical-sizing: auto; */
   color: var(--body-text-color);
   line-height: 1.5;
+}
+
+p {
+  text-indent: 2.5rem;
+}
+
+section p {
+  padding: 0 2rem;
+}
+
+section ul {
+  padding: 0 2rem;
+}
+
+section {
+  margin: 3rem 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--body-heading-color);
   font-family: var(--header-font);
-  /* font-optical-sizing: auto; */
+  margin: 1rem;
 }
 
 h1 {
   text-transform: uppercase;
   display: block;
+  margin-bottom: 1rem;
+}
+
+h3 { 
+  padding: 0 1rem;
 }
 
 /*--------------- Link Styling ---------------*/
@@ -219,12 +244,34 @@ main {
   padding-top: 4rem;
   grid-column: 2 / 3;
 }
-/* Can be broken up into sections later*/
+
+span p {
+margin-bottom: .5rem;
+}
 
 #theme-button-container {
   display: flex;
   justify-content: space-around;
   margin: 0.5rem 0;
+}
+
+section:nth-of-type(5) h2 {
+  margin-bottom: 1rem; 
+}
+
+
+section:nth-of-type(5) ul {
+  margin: 0 2rem;
+}
+
+
+section:nth-of-type(7) h2 {
+  margin-bottom: 1rem; 
+}
+
+
+section:nth-of-type(7) ul {
+  margin: 0 2rem; 
 }
 
 ul button {
@@ -247,6 +294,7 @@ footer {
   grid-column: 2 / 3;
   width: 100%;
   text-align: center;
+  margin-bottom: .5rem;
 }
 
 /*///////////////////// Media Queries at 768px /////////////////////*/
@@ -265,9 +313,9 @@ footer {
 
   /*================= Header MQ =================*/
   header {
-    /* was expecting this to make the nav span across all the rows(vertically) will have to solve later*/
     grid-row: span 2;
     background-color: transparent;
+    
   }
 
   /*--------------- Menu Button MQ --------------*/
@@ -293,6 +341,30 @@ footer {
 
 
   /*================== Main MQ ==================*/
- 
+  main {
+    padding-top: 1rem; 
+    grid-column: 2 / 3;
+    margin: 1rem auto;
+    
+  }
+
+  p {
+    margin-bottom: 1.5rem; 
+    line-height: 1.7;
+  }
+
+
+
+#demo {
+  margin: 2rem 0;
+}
+
+#resources {
+  margin: 2rem 0;
+}
+  
   /*================= Footer MQ =================*/
+  footer {
+    margin-top: 0rem;
+}
 }
