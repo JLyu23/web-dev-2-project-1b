@@ -1,5 +1,6 @@
+const rootEl = document.documentElement;
 // themes object
-const theme = {
+export const theme = {
     catpuccin: {
         backgroundColor: getComputedStyle(rootEl).getPropertyValue('--background-color'),
         bodyTextColor: getComputedStyle(rootEl).getPropertyValue('--body-text-color'),
