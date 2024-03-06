@@ -68,9 +68,12 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background-color);
-  scroll-behavior: smooth;
 }
 
 main {
@@ -89,28 +92,8 @@ p {
   text-indent: 2.5rem;
 }
 
-section p {
-  padding: 0 2rem;
-}
-
-section ul {
-  padding: 0 2rem;
-}
-
-section {
-  margin: 3rem 0;
-}
-
-p {
-  text-indent: 2.5rem;
-}
-
-section p {
-  padding: 0 2rem;
-}
-
-section ul {
-  padding: 0 2rem;
+section p, section ul {
+  padding: 0 3rem;
 }
 
 section {
@@ -120,13 +103,11 @@ section {
 h1, h2, h3, h4, h5, h6 {
   color: var(--body-heading-color);
   font-family: var(--header-font);
-  margin: 1rem;
+  margin: 1rem 2rem;
 }
 
 h1 {
   text-transform: uppercase;
-  display: block;
-  margin-bottom: 1rem;
 }
 
 h3 { 
@@ -157,7 +138,6 @@ a:focus {
 a:active {
   color: var(--link-text-color-secondary);
 }
-
 
 /*===================== Header Styling =====================*/
 header {
@@ -208,7 +188,6 @@ header {
   rotate: -45deg;
   transform: translate(-3px, -31px);
 }
-
 
 /*--------------- Navigation ---------------*/
 nav {
@@ -300,7 +279,7 @@ footer {
   }
 
   /*------------------ Link MQ ------------------*/
-  a {
+  a:not(#resources a) {
     font-size: 1.25rem;
   }
 
@@ -308,7 +287,6 @@ footer {
   header {
     grid-row: span 2;
     background-color: transparent;
-    
   }
 
   /*--------------- Menu Button MQ --------------*/
@@ -339,8 +317,7 @@ footer {
     margin: 1rem auto;
   }
 
-  p {
-    margin-bottom: 1.5rem; 
+  p { 
     line-height: 1.7;
   }
 
@@ -354,7 +331,6 @@ footer {
   
   /*================= Footer MQ =================*/
   footer {
-    margin-top: 0rem;
     background-color: var(--nav-background-color);
   }
 }
