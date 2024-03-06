@@ -281,7 +281,6 @@ footer {
   width: 100%;
   text-align: center;
   background-color: var(--nav-background-color);
-  margin-bottom: .5rem;
 }
 
 /*///////////////////// Media Queries at 768px /////////////////////*/
@@ -290,7 +289,6 @@ footer {
   .grid-container {
     display: grid;
     grid-template-columns: 16rem 1fr;
-    gap: 1rem;
   }
 
   p, li, ul button {
