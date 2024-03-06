@@ -42,31 +42,31 @@ window.addEventListener('resize', function() {
         : (hideNav(), hamburgerState(false));
 });
 
-backToTopLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
-});
+// backToTopLink.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth',
+//     });
+// });
 
-skipToContentLinks.forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault();
+// skipToContentLinks.forEach(link => {
+//     link.addEventListener('click', function (event) {
+//         event.preventDefault();
 
-        const targetSectionId = this.getAttribute('href').substring(1); // Remove the '#' from the href
-        const targetSection = document.getElementById(targetSectionId);
+//         const targetSectionId = this.getAttribute('href').substring(1); // Remove the '#' from the href
+//         const targetSection = document.getElementById(targetSectionId);
 
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
+//         if (targetSection) {
+//             targetSection.scrollIntoView({
+//                 behavior: 'smooth'
+//             });
 
            
-            hamburgerState(false);
-        }
-    });
-});
+//             hamburgerState(false);
+//         }
+//     });
+// });
 
 // Theme Switch Buttons
 
