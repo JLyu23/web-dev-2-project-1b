@@ -81,20 +81,24 @@ main {
   margin: 1rem auto;
 }
 
-p, li, ul button {
+p, li, div button {
   font-family: var(--body-font);
   color: var(--body-text-color);
   line-height: 1.5;
   font-size: .875rem;
 }
 
-p {
-  margin-bottom: .5rem;
+p { 
+  margin-bottom: 0.5rem;
   text-indent: 2.5rem;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 section p, section ul {
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 section {
@@ -223,7 +227,7 @@ img {
   margin: 1rem auto;
   display: block;
   border-radius: 0.5rem;
-  max-width: 75%;
+  max-width: 100%;
 }
 
 /*--------------- Theme Buttons ---------------*/
@@ -251,7 +255,7 @@ section:nth-of-type(7) ul {
   margin: 0 2rem; 
 }
 
-ul button {
+div button {
   margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
   border: 2px solid var(--body-text-color);
@@ -262,7 +266,7 @@ ul button {
   min-width: 7.8125rem;
 }
 
-ul button:hover {
+div button:hover {
   filter: drop-shadow(4px 4px var(--link-text-color-primary));
 }
 
@@ -288,6 +292,10 @@ footer {
   
   h1 {
     font-size: 2.5rem;
+  }
+
+  section p, section ul {
+    padding: 0 3rem;
   }
 
   /*------------------ Link MQ ------------------*/
@@ -330,8 +338,17 @@ footer {
   }
 
   img {
+    max-width: 75%;
+  }
+
+  .float-right {
     margin: 1rem 3rem 1rem 1rem;
     float: right;
+  }
+
+  .float-left {
+    margin: 1rem 1rem 0.5rem 2.5rem;
+    float: left;
   }
 
   p { 

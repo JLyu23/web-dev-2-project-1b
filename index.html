@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-
 <body id="top" class="grid-container">
     <header class="grid-item">
         <button id="menu-button" class="button-1" aria-label="Main Menu" aria-controls="primary-navigation" aria-expanded="false">
@@ -46,62 +45,55 @@
         <section id="about">
             <h2>What are CSS Variables?</h2>
             <p>CSS Variables, or CSS Custom Properties, are a feature introduced in CSS3. CSS Variables are used to define the names and attributes with values of properties according to our needs, providing a method for reusing and storing values across a stylesheet. This feature increases the modularity of the code, which improves the readability and structure in CSS. Whether it is a solo project or a group project, CSS variables enables better organization and helps to maintain consistency.</p>
-            <img src="images/css-var-what-sample.png" alt="Sample of CSS Variables">
             <p>For the syntax, two hyphens (--) are used as a prefix to indicate the CSS variables. Any valid CSS value, including characters, integers, and colors, can be saved in variables. In order to ensure encapsulation, the variables are scoped to the selector where they are defined &ndash; often in the root so the variables are accessible globally.</p>
+            <img src="images/css-var-breakdown.png" alt="syntax breakdown for CSS variables">
         </section>
-        
         <section id="function">
             <h2>What do CSS Variables do?</h2>
             <p>CSS variables enhance stylesheet maintenance by organizing variables in a modular fashion, streamlining code and improving readability. Providing a point of reference for values ensures a stylistic consistency, which is crucial for building a cohesive website. Once a specific value is assigned to a variable, it can be reused throughout the code, promoting scalability and flexibility in the stylesheet.</p>
             <p>CSS variables establish a standardized vocabulary for values, fostering collaboration among developers. This is particularly valuable when working on complex websites that may undergo changes during development. Developers can efficiently modify designs by changing the original variable value instead of reassigning it in every instance. Essentially, variables streamline style updates, reducing the need for significant code modifications and simplifying web design. The dynamic nature of CSS variables enables responsive design changes.</p>
         </section>
-        
         <section id="why">
             <h2>Why would you use CSS Variables?</h2>
             <p>There are many reasons one would prefer using CSS Variables, but lets boil it down to a few main points. Simplicity, modularity, & readability</p>
+            <img class="float-right" src="images/css-var-what-sample.png" alt="Sample of CSS Variables">
             <p>If you have variables it allows for modularity, with modularity comes consistencey. Its better shown as an example then explained in point form. When working on projects, it's common to see the same color used multiple places within your stylesheet. If you want to update a color a few shades brighter, it would bea poor use of time to go to each individual property and update the hex values seperatly. It's time consuming, its inconsistent, and produces unreliable code. By creating a CSS variable within the :root element it is creating a variable with a global scope, you can then access it in almost any spot within your stylesheet. This means you are applying the value in a singular spot, and referencing that value throughout your stylesheet. Creating simplicity, and modularity. Allowing for better collaboration between peers, and an easier to learn code base for new comers.</p>
-            <p>
-        </p>
         </section>
-
         <section id="where">
             <h2>Where would you use CSS Variables?</h2>
-            <p>CSS custom properties, or variables, are essential to maintaining consistency and modularity, particularly in large projects. They are used in CSS files to define repeating values. CSS custom properties, whether used to specify margins or establish color palettes, are adaptable and can be used in any CSS code. Their adaptability not only helps code organization but also readability, accommodating circumstances ranging from small modules to large stylesheets. In CSS, variables are declared within the :root selector, ensuring their global accessibility throughout the stylesheet. When working with JavaScript, you can utilize the values of CSS variables by applying them using the setProperty() method.
-            </p>
+            <img class="float-left" src="images/css-global-local.png" alt="a code snippet presenting local and global scope off a CSS variables declaration">
+            <p>CSS custom properties, or variables, are essential to maintaining consistency and modularity, particularly in large projects. They are used in CSS files to define repeating values. CSS custom properties, whether used to specify margins or establish color palettes, are adaptable and can be used in any CSS code. Their adaptability not only helps code organization but also readability, accommodating circumstances ranging from small modules to large stylesheets. In CSS, variables are declared within the :root selector, the pseduo element :root is globally accessible meaning that once a CSS Variable is declared in the :root selector it can be applied anywhere within your CSS file as they are all children elements of the root. One method you can utilize when working with javascript is the setProperty() method, it allows you to target and element and apply the selected style to that specific element. We can target the CSS Variable with getComputedStyle(), as it is part of the root element.</p>
         </section>
-
         <section id="pro-con">
             <h2>CSS Variables: Pros and Cons</h2>
             <h3>PROS:</h3>
-                <ul>
-                    <li><span>Reusability / Modularity:</span> CSS Variables promote efficient code by encouraging the reuse of values, fostering a modular approach.</li>
-                    <li><span>Maintainability:</span> Easy-to-update code with centralized values for a smoother development process.</li>
-                    <li><span>Readability:</span> Improves code understanding through better organization and semantics.</li>
-                    <li><span>Consistency:</span> Guarantees a consistent look and feel across the entire project, ensuring a cohesive user experience.</li>
-                    <li><span>Theming:</span> Dynamic theming capabilities allow for easy personalization, creating a more engaging user experience.</li>
-                    <li><span>Fallback Argument:</span> CSS Variables provide fallback values, ensuring consistent styles, especially in older browsers.</li>
-                    <li><span>Adapts to different screen sizes, making designs responsive and dynamic.</li>
-                </ul>
-
-                <h3>CONS:</h3>
-                <ul>
-                    <li><span>Browser Compatibility:</span> Support for CSS variables may vary across browsers, requiring careful consideration, particularly in outdated ones.</li>
-                    <li><span>Limited Dynamic Behavior:</span> While dynamic, working around CSS variable limitations may be necessary for certain designs.</li>
-                    <li><span>Global Scope Reassignment Conflicts:</span>  Reassigning variables globally may lead to conflicts, requiring careful management to prevent design issues.</li>
-                </ul>
+            <ul>
+                <li><span>Reusability / Modularity:</span> CSS Variables promote efficient code by encouraging the reuse of values, fostering a modular approach.</li>
+                <li><span>Maintainability:</span> Easy-to-update code with centralized values for a smoother development process.</li>
+                <li><span>Readability:</span> Improves code understanding through better organization and semantics.</li>
+                <li><span>Consistency:</span> Guarantees a consistent look and feel across the entire project, ensuring a cohesive user experience.</li>
+                <li><span>Theming:</span> Dynamic theming capabilities allow for easy personalization, creating a more engaging user experience.</li>
+                <li><span>Fallback Argument:</span> CSS Variables provide fallback values, ensuring consistent styles, especially in older browsers.</li>
+                <li><span>Adapts to different screen sizes, making designs responsive and dynamic.</li>
+            </ul>
+            <h3>CONS:</h3>
+            <ul>
+                <li><span>Browser Compatibility:</span> Support for CSS variables may vary across browsers, requiring careful consideration, particularly in outdated ones.</li>
+                <li><span>Limited Dynamic Behavior:</span> While dynamic, working around CSS variable limitations may be necessary for certain designs.</li>
+                <li><span>Global Scope Reassignment Conflicts:</span>  Reassigning variables globally may lead to conflicts, requiring careful management to prevent design issues.</li>
+            </ul>
         </section>
-
         <section id="demo">
             <h2>Code Demo (pay attention in presentation! >:[ )</h2>
-            <ul id="theme-button-container">
+            <p>Click here to test some themes!</p>
+            <div id="theme-button-container">
                 <button id="catpuccin">Catpuccin</button>
                 <button id="nic">Nic</button>
                 <button id="kyl">Kylan</button>
                 <button id="nat">Nat</button>
                 <button id="jen">Jenny</button>
-            </ul>
+            </div>
         </section>
-
         <section id="resources">
             <h2>Resources & Acknowledgements</h2>
             <ul>
@@ -110,15 +102,12 @@
                 <li><a href="https://www.fabriziovanmarciano.com/quick-beginners-guide-to-css-variables/">Fabrizio Van Marciano</a></li>
                 <li><a href="https://www.freecodecamp.org/news/learn-css-variables-in-5-minutes-80cf63b4025d/">FreeCodeCamp</a></li>
             </ul>
-            
         </section>
     </main>
-    
     <footer class="grid-item">
         <p><a href="#top">Back to Top</a></p>
         <p>&copy; 2024 - For educational purposes</p>
     </footer>
-
     <script src="script/script.js"></script>
 </body>
 </html>
